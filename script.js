@@ -35,5 +35,11 @@ button1.addEventListener('click', function () {
   //   array[index].appendChild(spanClasses[index])
   // }
   // // console.log(splitText);
+  function alertMessenger() {
+    if (text.length === 0 || text.length === ' ') {
+      elementP.innerText = 'Por favor, digite o conteúdo da carta.';
+    }
+  }
+  alertMessenger();
 
 })
