@@ -6,3 +6,9 @@ span {
   margin: 5px;
   box-shadow: 5px 5px 5px grey;
 }
+
+.newspaper {
+  background-color: rgb(250, 235, 215);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
