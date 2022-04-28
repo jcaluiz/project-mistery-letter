@@ -67,7 +67,13 @@ function cardStyle() {
   }
 }
 
+function contador() {
+  let contador = document.querySelector('#carta-contador');
+  let textSplit = inputText.value.split(' ');
+  contador.innerHTML = textSplit.length;
+}
 
 button1.addEventListener('click', spanChild)
 button1.addEventListener('click', alertMessenger)
 button1.addEventListener('click', cardStyle)
+button1.addEventListener('click', contador)
