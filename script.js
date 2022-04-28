@@ -36,5 +36,33 @@ function spanChild() {
   }
 }
 
+function grupoEstilo() {
+  let style = ['newspaper', 'magazine1', 'magazine2'];
+  return style[parseInt(Math.random() * 3)];
+}
+
+function grupoTamanho() {
+  let size = ['medium', 'big', 'reallybig']
+  return size[parseInt(Math.random() * 3)];
+}
+
+function grupoRotacao() {
+  let rotation = ['rotateleft', 'rotateright']
+  return rotation[parseInt(Math.random() * 2)];
+}
+
+function grupoInclinacao() {
+  let inclination = ['skewleft', 'skewright']
+  return inclination[parseInt(Math.random() * 2)];
+}
+
+function cardStyle() {
+  let elementSpan = document.getElementsByTagName('span');
+  for(let index = 0; index < elementSpan.length; index += 1){
+    elementSpan[index].classList.add(grupoEstilo(), grupoTamanho(), grupoRotacao(), grupoInclinacao());
+  }
+}
+
 button1.addEventListener('click', spanChild)
 button1.addEventListener('click', alertMessenger)
+button1.addEventListener('click', cardStyle)
