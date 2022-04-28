@@ -60,8 +60,13 @@ function cardStyle() {
   let elementSpan = document.getElementsByTagName('span');
   for(let index = 0; index < elementSpan.length; index += 1){
     elementSpan[index].classList.add(grupoEstilo(), grupoTamanho(), grupoRotacao(), grupoInclinacao());
+    elementSpan[index].addEventListener('click', function() {
+      elementSpan[index].classList.remove('newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright');
+      elementSpan[index].classList.add(grupoEstilo(), grupoTamanho(), grupoRotacao(), grupoInclinacao());
+    })
   }
 }
+
 
 button1.addEventListener('click', spanChild)
 button1.addEventListener('click', alertMessenger)
