@@ -8,20 +8,22 @@ section1.appendChild(elementP)
 function alertMessenger() {
   let text = inputText.value;
   let textSplit = inputText.value.split('');
-  // console.log(text);
-  if (text.length === 0 || text === ' ') {
+
+  if (text.length === 0) {
     elementP.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }
+
   let conta = 0;
-  for(let index = 0; index < textSplit.length; index += 1){
-    if(textSplit[index] !== ' ') {
+
+  for (let index = 0; index < textSplit.length; index += 1) {
+    if (textSplit[index] !== ' ') {
       conta += 1;
     }
   }
-  if(conta === 0) {
+
+  if (conta === 0) {
     elementP.innerHTML = 'Por favor, digite o conteúdo da carta.';
   }
-  console.log(conta);
 }
 
 function spanChild() {
@@ -33,6 +35,6 @@ function spanChild() {
     elementP.appendChild(span);
   }
 }
+
 button1.addEventListener('click', spanChild)
 button1.addEventListener('click', alertMessenger)
-
